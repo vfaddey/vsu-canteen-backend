@@ -3,7 +3,10 @@ from starlette.middleware.cors import CORSMiddleware
 from src.dishes.router import router as dish_router
 from src.orders.router import router as order_router
 
-app = FastAPI(openapi_version="3.0.3")
+app = FastAPI(
+    root_path="/api",
+    swagger_ui_init_oauth={"clientId": "your-client-id"}
+)
 
 app.include_router(dish_router)
 app.include_router(order_router)
