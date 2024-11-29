@@ -10,4 +10,6 @@ class Dish(Base):
     name = Column(String, index=True)
     description = Column(String, default='')
     price = Column(Float)
+    category = Column(String, default='Вторые блюда')
+    day = Column(String, default='Понедельник')
     image_url = Column(String, default='#')

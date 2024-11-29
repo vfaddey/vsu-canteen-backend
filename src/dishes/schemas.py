@@ -6,6 +6,8 @@ class DishCreate(BaseModel):
     description: str
     price: float
     image_url: str
+    day: str
+    category: str
 
 class DishSchema(DishCreate):
     id: int
